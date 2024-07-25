@@ -15,6 +15,7 @@ public class ClientePessoaFisica extends Cliente {
     }
     
     public boolean validarCPF(String cpf) {
-        
+        if (this.cpf == cpf) return true;
+        return false;
     }
 }
