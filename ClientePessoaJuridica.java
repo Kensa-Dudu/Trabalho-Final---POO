@@ -13,6 +13,7 @@ public class ClientePessoaJuridica extends Cliente {
     }
     
     public boolean validarCNPJ(String cnpj) {
-        return true;
+        if (this.cnpj == cnpj) return true;
+        return false;
     }
 }
