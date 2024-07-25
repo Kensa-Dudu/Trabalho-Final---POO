@@ -13,8 +13,8 @@ public class Pedido {
         
     }
     
-    public boolean calcularTotal() {
-        return true;
+    public double calcularTotal() {
+        return 0;
     }
     
     public void atualizarStatus(String status) {
