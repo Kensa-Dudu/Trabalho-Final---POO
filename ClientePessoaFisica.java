@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class ClientePessoaFisica extends Cliente {
     private String cpf;
     private String rg;
