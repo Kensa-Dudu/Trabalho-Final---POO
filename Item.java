@@ -1,25 +1,29 @@
+import java.math.BigDecimal;
+
 public class Item {
-    private int idItem;
+    private Integer idItem;
     private int quantidade;
-    private double precoUnitario;
+    private BigDecimal precoUnitario;
     
     
-    public Item (int idPedido, int quantidade, double precoUnitario) {
+    public Item (Integer idItem, int quantidade, BigDecimal precoUnitario) {
         this.idItem = idItem;
         this.quantidade = quantidade;
         this.precoUnitario = precoUnitario;
+        
     }
     
-    public double calcularSubtotal() {
-        return quantidade * precoUnitario;
+    public BigDecimal calcularSubtotal() {
+        String xText = this.quantidade + "";
+        return new BigDecimal(xText).multiply(precoUnitario);
     }
     
     // Getters and Setters
-    public int getIdItem() {
+    public Integer getIdItem() {
         return idItem;
     }
 
-    public void setIdItem(int idItem) {
+    public void setIdItem(Integer idItem) {
         this.idItem = idItem;
     }
 
@@ -31,11 +35,11 @@ public class Item {
         this.quantidade = quantidade;
     }
 
-    public double getPrecoUnitario() {
+    public BigDecimal getPrecoUnitario() {
         return precoUnitario;
     }
 
-    public void setPrecoUnitario(double precoUnitario) {
+    public void setPrecoUnitario(BigDecimal precoUnitario) {
         this.precoUnitario = precoUnitario;
     }
 }
