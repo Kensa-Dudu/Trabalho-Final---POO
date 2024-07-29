@@ -1,25 +1,86 @@
+//package br.gov.ufg.entity;
+
+import java.math.BigDecimal;
+
 public class Produto {
-    private int idProduto;
+    private Integer id;
     private String nome;
     private String descricao;
-    private double preco;
+    private BigDecimal preco;
     private int estoque;
     
+    private String imagem;
     
-    public Produto (int idProduto, String nome,  String descricao, double preco, int estoque) {
-        this.idProduto = idProduto;
+    
+    public Produto (Integer id, String nome,  String descricao, BigDecimal preco, int estoque/*/,String imagem/**/) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.estoque = estoque;
-        
+        //this.imagem = imagem;
     }
     
     public void atualizarEstoque(int quantidade) {
-        
+        this.estoque += quantidade;
     }
     
-    public void atualizarPreco(double preco) {
-        
+    public void atualizarPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
+    
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
+
+    public int getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(int estoque) {
+        this.estoque = estoque;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+    
+    //public String imprimeDados(){return "ID:" + id + "  " + nome + " | R$" + preco + " | Estoque: " + estoque + " | Descrição: " + descricao;}
+    
+    @Override
+    public String toString() {
+        return "Produto{" + "id=" + id + ", nome='" + nome + '\'' + '}';
     }
 }
