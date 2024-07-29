@@ -3,13 +3,13 @@ import java.util.Date;
 import java.util.List;
 
 public class Pedido {
-    private int idPedido;
+    private Integer idPedido;
     private Date dataPedido;
     private String status;
     private List<Item> itens;
     
     
-    public Pedido (int idPedido, Date dataPedido, String status) {
+    public Pedido (Integer idPedido, Date dataPedido, String status) {
         this.idPedido = idPedido;
         this.dataPedido = dataPedido;
         this.status = status;
@@ -39,11 +39,11 @@ public class Pedido {
     }
     
     // Getters and Setters
-    public int getIdPedido() {
+    public Integer getIdPedido() {
         return idPedido;
     }
 
-    public void setIdPedido(int idPedido) {
+    public void setIdPedido(Integer idPedido) {
         this.idPedido = idPedido;
     }
 
