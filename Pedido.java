@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.math.BigDecimal;
 
 public class Pedido {
     private Integer idPedido;
@@ -16,10 +17,10 @@ public class Pedido {
         this.itens = new ArrayList<>();
     }
     
-    public double calcularTotal() {
-        double total = 0;
+    public BigDecimal calcularTotal() {
+        BigDecimal total = BigDecimal.ZERO;
         for (Item item : itens) {
-            total += item.calcularSubtotal();
+            total = total.add(item.calcularSubtotal());
         }
         return total;
     }
